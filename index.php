@@ -14,7 +14,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light " id="nav">
 
-		 <a href="/index.php" class="navbar-brand"id="brand">RealDeal2</a>
+		 <a href="/index.php" class="navbar-brand"id="brand">RealDeal</a>
 <button class="navbar-toggle navbar-toggler  navbar-toggler-right" type="button" style="border: 2px solid  #009e47;" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon icon-bar" ></span>
             </button>
@@ -74,6 +74,34 @@
 	</div>
  </nav>
 
+	 <!-- Footer -->
+	<footer class="page-footer font-small unique-color-dark pt-4">
+
+	 <!-- Footer Elements -->
+	 <div class="container">
+
+		 <!-- Call to action -->
+		 <ul class="list-unstyled list-inline text-center py-2">
+			 <li class="list-inline-item">
+				 <h5 class="mb-1">Register for free</h5>
+			 </li>
+			 <li class="list-inline-item">
+				 <a href="#!" class="btn btn-outline-white btn-rounded">Sign up!</a>
+			 </li>
+		 </ul>
+		 <!-- Call to action -->
+
+	 </div>
+	 <!-- Footer Elements -->
+
+	 <!-- Copyright -->
+	 <div class="footer-copyright text-center py-3">© 2018 Copyright:
+		 <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+	 </div>
+	 <!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
 
 </body>
 
