@@ -74,34 +74,105 @@
 	</div>
  </nav>
 
-	 <!-- Footer -->
-	<footer class="page-footer font-small unique-color-dark pt-4">
+ <!-- main content -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>main content</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-md-push-9 sidebar">
+			<h2>sidebar</h2>
+			<ul class="list-group">
+				<li class="list-group-item">Service1</li>
+				<li class="list-group-item">Service2</li>
+				<li class="list-group-item">Service3</li>
+			</ul>
+		</div>
+		<div class="col-md-9 col-md-push-3 main_content">
+			<h2>Recommendations</h2>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="panel">
+						<img src="img/rav4.png" alt="Rav4">
+						<p>Toyota Rav4</p>
+						<p>12350$</p>
+						<p>Lusaka, today 19:15</p>
+					</div>
+				</div>
 
-	 <!-- Footer Elements -->
-	 <div class="container">
+				<div class="col-sm-4">
+					<div class="panel">
+						<img src="img/rav4.png" alt="Rav4">
+						<p>Toyota Rav4</p>
+						<p>12350$</p>
+						<p>Lusaka, today 19:15</p>
+					</div>
+				</div>
 
-		 <!-- Call to action -->
-		 <ul class="list-unstyled list-inline text-center py-2">
-			 <li class="list-inline-item">
-				 <h5 class="mb-1">Register for free</h5>
-			 </li>
-			 <li class="list-inline-item">
-				 <a href="#!" class="btn btn-outline-white btn-rounded">Sign up!</a>
-			 </li>
-		 </ul>
-		 <!-- Call to action -->
+				<div class="col-sm-4">
+					<div class="panel">
+						<img src="img/rav4.png" alt="Rav4">
+						<p>Toyota Rav4</p>
+						<p>12350$</p>
+						<p>Lusaka, today 19:15</p>
+					</div>
+				</div>
 
-	 </div>
-	 <!-- Footer Elements -->
+				<div class="col-sm-4">
+					<div class="panel">
+						<img src="img/rav4.png" alt="Rav4">
+						<p class="title_recom">Toyota Rav4</p>
+						<p class="price_recom">12350$</p>
+						<p>Lusaka, today 19:15</p>
+					</div>
+				</div>
 
-	 <!-- Copyright -->
-	 <div class="footer-copyright text-center py-3">© 2018 Copyright:
-		 <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-	 </div>
-	 <!-- Copyright -->
 
-	</footer>
+
+			</div>
+		</div>
+
+		</div>
+	</div>
+
+
 	<!-- Footer -->
+ <footer class="page-footer font-small unique-color-dark pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+ 	 <!-- Call to action -->
+ 	 <ul class="list-unstyled list-inline text-center py-2">
+ 		 <li class="list-inline-item">
+ 			 <h5 class="mb-1">Register for free</h5>
+ 		 </li>
+ 		 <li class="list-inline-item">
+ 			 <a href="#!" class="btn btn-outline-white btn-rounded">Sign up!</a>
+ 		 </li>
+ 	 </ul>
+ 	 <!-- Call to action -->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+ 	 <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+ </footer>
+ <!-- end of Footer -->
+</div>
+
+ <!-- end of main content -->
+
+
+
+
 
 </body>
 
