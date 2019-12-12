@@ -61,12 +61,24 @@ padding-left: 90px;
   /* float: left; */
 }
 
+.panel p {
+  margin-left: 30%;
+  /* border: 1px solid black; */
+  margin-top: -5%;
+
+}
+
+.title_recom {
+  /* margin-top: -5%; */
+  /* padding-bottom: -10%; */
+}
+
 footer {
 	/* position: auto; */
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: gray;
+  background-color: black;
   color: white;
   text-align: center;
 }
