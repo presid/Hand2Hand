@@ -67,9 +67,14 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 		<div class="authorization">
-			<a href="#">Sign in</a>
-			<span>/</span>
-			<a href="#">Sign up</a>
+			<p>Sign-</p>
+			<div class="connection_lines">
+
+			</div>
+			<div class="auth_link">
+				<a href="#" class="auth_up">up</a>
+				<a href="#" class="auth_in">in</a>
+			</div>
 		</div>
 
 
