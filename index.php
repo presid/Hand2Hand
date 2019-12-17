@@ -68,15 +68,36 @@
     </form>
 		<div class="authorization">
 			<p>Sign-</p>
-			<div class="connection_lines">
-
-			</div>
+			<div class="connection_lines_up"></div>
+			<div class="connection_lines_in"></div>
 			<div class="auth_link">
 				<a href="#" class="auth_up">up</a>
 				<a href="#" class="auth_in">in</a>
 			</div>
 		</div>
+		<script type="text/javascript">
+		$(function() {
+			$('.auth_up').hover(function() {
+				$('.connection_lines_up').css('border', '2px solid green');
+				$('.connection_lines_up').css('border-right', 'none');
+				$('.connection_lines_up').css('border-bottom', 'none');
+			}, function() {
+				// on mouseout, reset the background colour
+				$('.connection_lines_up').css('border', 'none');
+			});
+		});
 
+		$(function() {
+			$('.auth_in').hover(function() {
+				$('.connection_lines_in').css('border', '2px solid green');
+				$('.connection_lines_in').css('border-right', 'none');
+				$('.connection_lines_in').css('border-top', 'none');
+			}, function() {
+				// on mouseout, reset the background colour
+				$('.connection_lines_in').css('border', 'none');
+			});
+		});
+</script>
 
 	</div>
  </nav>
