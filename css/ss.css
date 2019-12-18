@@ -21,18 +21,81 @@ margin-left: 90px;
 padding-right: 90px;
 }
 #form{
-margin-right: 90px;
-padding-left: 90px;
+margin-right: 200px;
+padding-left: 20px;
+}
+
+.authorization {
+  /* border: 1px solid blue; */
+  margin-left: -150px;
+  position: relative;
+  /* position: relative; */
+}
+
+.authorization p {
+  float: left;
+  margin-right: 25px;
+  margin-top: 15px;
+  color: #009e47;
+}
+
+.auth_up {
+  padding-bottom: 8px;
+  display: block;
+}
+
+.auth_link {
+    /* border: 1px solid green; */
+    float: left;
+}
+
+.connection_lines_up {
+  float: left;
+  position: absolute;
+  /* display: block; */
+  margin-top: 12px;
+  margin-left: 38px;
+  /* z-index: 1; */
+  height: 36px;
+  width: 24px;
+  /* border: 2px solid green; */
+  border-right: none;
+  border-bottom: none;
+  top:1px;
+  left:-2px;
+  width:34%;
+  height: 16px;
+}
+
+.connection_lines_in {
+  float: left;
+  position: absolute;
+  /* display: block; */
+  margin-top: 12px;
+  margin-left: 38px;
+  /* z-index: 1; */
+  height: 36px;
+  width: 24px;
+  /* border: 2px solid green; */
+  /* transition: 0.1s; */
+  border-right: none;
+  border-top: none;
+  top:18px;
+  left:-2px;
+  width:34%;
+  height: 16px;
 }
 
 #nav a {
-
 	color: #fffff7;
 }
 #nav a:hover , a:focus {
-
   color:green;
   text-decoration:none;
+}
+
+.navbar-nav {
+  margin-left: -40px;
 }
 
 .dropdown:hover>.dropdown-menu{
@@ -57,15 +120,21 @@ padding-left: 90px;
 }
 
 .main_content .panel {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* float: left; */
 }
 
 .panel p {
   margin-left: 30%;
   /* border: 1px solid black; */
-  margin-top: -5%;
+  margin-top: -7%;
+}
 
+.panel .title_link {
+  margin-top: -10px;
+  margin-bottom: 17px;
+  margin-left: 30%;
+  display: inline-block;
 }
 
 .title_recom {
@@ -75,6 +144,7 @@ padding-left: 90px;
 
 footer {
 	/* position: auto; */
+  margin-top: 100px;
   left: 0;
   bottom: 0;
   width: 100%;

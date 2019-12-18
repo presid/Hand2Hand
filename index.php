@@ -14,14 +14,14 @@
 
 <nav class="navbar navbar-expand-lg navbar-light " id="nav">
 
-		 <a href="/index.php" class="navbar-brand"id="brand">RealDeal</a>
-<button class="navbar-toggle navbar-toggler  navbar-toggler-right" type="button" style="border: 2px solid  #009e47;" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon icon-bar" ></span>
-            </button>
+	 <a href="/index.php" class="navbar-brand"id="brand">RealDeal</a>
+	 <button class="navbar-toggle navbar-toggler  navbar-toggler-right" type="button" style="border: 2px solid  #009e47;" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		 <span class="navbar-toggler-icon icon-bar" ></span>
+	 </button>
 	<div class="collapse navbar-collapse"  id="navbarNav">
 
 
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
   <li class="nav-item">
     <a class="nav-link active" href="#">Vehicles</a>
   </li>
@@ -49,7 +49,7 @@
 		<a class="dropdown-item" href="#">Children</a></div>
 
   </li>
-			<li class="nav-item dropdown">
+	<li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Printing</a>
@@ -57,7 +57,6 @@
       <a class="dropdown-item" href="#">Car hire</a>
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#">Decorations</a></div>
-
   </li>
 	   	<li class="nav-item">
     <a class="nav-link " href="#">Extras</a>
@@ -67,9 +66,38 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+		<div class="authorization">
+			<p>Sign-</p>
+			<div class="connection_lines_up"></div>
+			<div class="connection_lines_in"></div>
+			<div class="auth_link">
+				<a href="#" class="auth_up">up</a>
+				<a href="#" class="auth_in">in</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+		$(function() {
+			$('.auth_up').hover(function() {
+				$('.connection_lines_up').css('border', '2px solid green');
+				$('.connection_lines_up').css('border-right', 'none');
+				$('.connection_lines_up').css('border-bottom', 'none');
+			}, function() {
+				// on mouseout, reset the background colour
+				$('.connection_lines_up').css('border', 'none');
+			});
+		});
 
-
-
+		$(function() {
+			$('.auth_in').hover(function() {
+				$('.connection_lines_in').css('border', '2px solid green');
+				$('.connection_lines_in').css('border-right', 'none');
+				$('.connection_lines_in').css('border-top', 'none');
+			}, function() {
+				// on mouseout, reset the background colour
+				$('.connection_lines_in').css('border', 'none');
+			});
+		});
+</script>
 
 	</div>
  </nav>
@@ -95,8 +123,8 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="panel">
-						<img src="img/rav4.png" alt="Rav4">
-						<p>Toyota Rav4</p>
+						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
+						<a class="title_link" href="#">Toyota Rav4</a>
 						<p>12350$</p>
 						<p>Lusaka, today 19:15</p>
 					</div>
@@ -104,8 +132,8 @@
 
 				<div class="col-sm-4">
 					<div class="panel">
-						<img src="img/rav4.png" alt="Rav4">
-						<p>Toyota Rav4</p>
+						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
+						<a class="title_link" href="#">Toyota Rav4</a>
 						<p>12350$</p>
 						<p>Lusaka, today 19:15</p>
 					</div>
@@ -113,25 +141,45 @@
 
 				<div class="col-sm-4">
 					<div class="panel">
-						<img src="img/rav4.png" alt="Rav4">
-						<p>Toyota Rav4</p>
+						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
+						<a class="title_link" href="#">Toyota Rav4</a>
 						<p>12350$</p>
 						<p>Lusaka, today 19:15</p>
 					</div>
 				</div>
-
-				<div class="col-sm-4">
-					<div class="panel">
-						<img src="img/rav4.png" alt="Rav4">
-						<p class="title_recom">Toyota Rav4</p>
-						<p class="price_recom">12350$</p>
-						<p>Lusaka, today 19:15</p>
-					</div>
-				</div>
-
-
 
 			</div>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="panel">
+						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
+						<a class="title_link" href="#">Toyota Rav4</a>
+						<p>12350$</p>
+						<p>Lusaka, today 19:15</p>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="panel">
+						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
+						<a class="title_link" href="#">Toyota Rav4</a>
+						<p>12350$</p>
+						<p>Lusaka, today 19:15</p>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="panel">
+						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
+						<a class="title_link" href="#">Toyota Rav4</a>
+						<p>12350$</p>
+						<p>Lusaka, today 19:15</p>
+					</div>
+				</div>
+
+			</div>
+
 		</div>
 
 		</div>
@@ -158,11 +206,9 @@
   </div>
   <!-- Footer Elements -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
- 	 <a href="#"> MDBootstrap.com</a>
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+ 	 <a href="#"> realdeal.com</a>
   </div>
-  <!-- Copyright -->
 
  </footer>
  <!-- end of Footer -->
