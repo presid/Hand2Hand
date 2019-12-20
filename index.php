@@ -97,13 +97,14 @@
 				$('.connection_lines_in').css('border', 'none');
 			});
 		});
+		$('.carousel').carousel();
 </script>
 
 	</div>
  </nav>
 
  <!-- main content -->
-<div class="container-fluid">
+<!--<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
 			<h2>main content</h2>
@@ -118,6 +119,42 @@
 				<li class="list-group-item">Service3</li>
 			</ul>
 		</div>
+		</div>
+		</div>-->
+<div class="list-group" id="group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    service</a>
+  <a href="#" class="list-group-item list-group-item-action">Service1</a>
+  <a href="#" class="list-group-item list-group-item-action">Service2</a>
+  <a href="#" class="list-group-item list-group-item-action">Service3</a>
+  
+</div>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" id="carou">
+  <ol class="carousel-indicators" id="carou2">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" id="carou1">
+    <div class="carousel-item active">
+      <img class="d-block w-100"  src="img/rav4.png" alt="Rav4">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/rav4.png"  alt="Rav41">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/rav4.png"  alt="Rav42">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" id="carou3">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" id="carou4">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 		<!--<div class="col-md-9 col-md-push-3 main_content">
 			<h2>Recommendations</h2>
 			<div class="row">
@@ -247,7 +284,7 @@
 
  </footer>
  <!-- end of Footer -->
-</div>
+
 
  <!-- end of main content -->
 
