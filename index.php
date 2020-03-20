@@ -75,30 +75,7 @@
 				<a href="#" class="auth_in">in</a>
 			</div>
 		</div>
-		<script type="text/javascript">
-		$(function() {
-			$('.auth_up').hover(function() {
-				$('.connection_lines_up').css('border', '2px solid green');
-				$('.connection_lines_up').css('border-right', 'none');
-				$('.connection_lines_up').css('border-bottom', 'none');
-			}, function() {
-				// on mouseout, reset the background colour
-				$('.connection_lines_up').css('border', 'none');
-			});
-		});
-
-		$(function() {
-			$('.auth_in').hover(function() {
-				$('.connection_lines_in').css('border', '2px solid green');
-				$('.connection_lines_in').css('border-right', 'none');
-				$('.connection_lines_in').css('border-top', 'none');
-			}, function() {
-				// on mouseout, reset the background colour
-				$('.connection_lines_in').css('border', 'none');
-			});
-		});
-		$('.carousel').carousel();
-</script>
+		
 
 	</div>
  </nav>
@@ -121,29 +98,151 @@
 		</div>
 		</div>
 		</div>-->
-<div class="list-group" id="group">
-  <a href="#" class="list-group-item list-group-item-action active">
-    service</a>
-  <a href="#" class="list-group-item list-group-item-action">Service1</a>
-  <a href="#" class="list-group-item list-group-item-action">Service2</a>
-  <a href="#" class="list-group-item list-group-item-action">Service3</a>
+	<div class="list-group" id="group">
+  <div class="section1">
+            
+          <button class="navbar-toggle navbar-toggler  navbar-toggler-right" type="button" style="border: 2px solid  #009e47; margin-top: 5px;" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		 <span class=" icon-bar" ></span>
+		 <span class=" icon-bar" ></span>
+		 <span class=" icon-bar" ></span>
+	 </button>
+                <a class="cgr" >Categories</a>
+            </div>
+ <a class="submenu" >Sound devices</a>
+                <a class="submenu">Video game consoles</a>
+                <a class="submenu">Cell/Mobile/Wireless phones</a>
+                <a class="submenu">Home security system</a>
+                <a class="submenu">Cameras</a>
+                <a class="submenu">Home theater system</a>
+                <a class="submenu">TVs</a>
+                <a class="submenu">Computers</a>
+                <a class="submenu">Games/Movies/Music</a>
+                <a class="submenu">Accessories</a>
+                <a class="submenu">Office</a>
+                <a class="submenu">Home appliances</a>
   
+	 
+       
+            <p class="para1">Specials</p>
+            <div class="Special">
+        <div class="card" id="cardbox" >
+			  
+         <img src="img/rav4.png" class="card-img-top" id="reduce" alt="rav4">
+           <div class="card-body" id="reduce-card">
+            <h5 class="card-title">Card title</h5>
+             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     
+          </div>
 </div>
-		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" id="carou">
+				
+				 <div class="card" id="cardbox" >
+			  
+         <img src="img/rav4.png" class="card-img-top" id="reduce" alt="rav4">
+           <div class="card-body" id="reduce-card">
+            <h5 class="card-title">Card title</h5>
+             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     
+          </div>
+</div>
+                <fieldset>
+                    <legend>Sale</legend>
+                    <div class="div1">
+                        <img src="Images/Philips_Trimmers.png" class="img1" />
+                    </div>
+                    <div class="div2">
+                        <h3>$24.34<strike>$25.63</strike></h3>
+                        <p>Philips QT4000 Experience Men's Stubble Trimmer 44DJH62</p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sale</legend>
+                    <div class="div1">
+                        <img src="Images/y37-high-figure.png" class="img1" />
+                    </div>
+                    <div class="div2">
+                        <h3>$399<strike>$402.30</strike></h3>
+                        <p>vivo Xshot 5.2 inch 4G Android 4.2 Quad Core 2.3GHz RAM 2GB ROM 16GB</p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sale</legend>
+                    <div class="div1">
+                        <img src="Images/cruzer-force-usb-flash-drive-250x250.png" class="img1" />
+                    </div>
+                    <div class="div2">
+                        <h3>$16<strike>$18</strike></h3>
+                        <p>SanDisk Cruzer Force 64 GB USB Flash Drive USB 2.0</p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sale</legend>
+                    <div class="div1">
+                        <img src="Images/Canon-EF-24-105mm-f-4L-IS-II-USM-Side_tcm14-1451451.png" class="img1" />
+                    </div>
+                    <div class="div2">
+                        <h3>$133.89<strike>$134.16</strike></h3>
+                        <p>Canon EF 75-300mm f/4.0-5.6 III Lens</p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sale</legend>
+                    <div class="div1">
+                        <img src="Images/bag2.png" class="img1" />
+                    </div>
+                    <div class="div2">
+                        <h3>$14.92<strike></strike></h3>
+                        <p>PZJ® Galaxy Backpack, Unisex Galaxy Pattern Canvas</p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sale</legend>
+                    <div class="div1">
+                        <img src="Images/images.jpg" class="img1" />
+                    </div>
+                    <div class="div2">
+                        <h3>$1.89<strike>$2</strike></h3>
+                        <p>The Mistake: An unputdownable psychological thriller with a brilliant twist</p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sale</legend>
+                    <div class="div1">
+                        <img src="Images/Hand-Blender-Mixer-PNG-Image1.png" class="img1" />
+                    </div>
+                    <div class="div2">
+                        <h3>$8.49<strike>$9</strike></h3>
+                        <p>Elgento E12009 Hand Blender, 170 W - White</p>
+                    </div>
+                </fieldset>
+            </div>
+
+
+
+        </div>
+
+	<div class="container p-4 bg-dark text-white" id="carou">
+    <div class="w-60 h-60">
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
   <ol class="carousel-indicators" id="carou2">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner" id="carou1">
+  <div class="carousel-inner " id="carou1">
     <div class="carousel-item active">
-      <img class="d-block w-100"  src="img/rav4.png" alt="Rav4">
+      <img class="d-block w-80"  src="img/rav4.png" alt="Rav4" >
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/rav4.png"  alt="Rav41">
+      <img class="d-block w-80" src="img/rav4.png"  alt="Rav41">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/rav4.png"  alt="Rav42">
+      <img class="d-block w-80" src="img/rav4.png"  alt="Rav42">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" id="carou3">
@@ -155,6 +254,11 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+	</div> 
+</div>
+	
+	
+ 
 		<!--<div class="col-md-9 col-md-push-3 main_content">
 			<h2>Recommendations</h2>
 			<div class="row">
@@ -221,7 +325,7 @@
 
 		</div>-->
 		<div class="card-deck" id="deck">
-  <div class="card">
+  <div class="card" id="box">
     <img src="img/rav4.png" alt="Rav4">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
@@ -244,7 +348,7 @@
     </div>
   </div>
   <div class="card">
-     <img src="img/rav4.png" alt="Rav4">
+     <img src="img/rav4.png"  class="card-img-top" id="reduce"alt="Rav4">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -255,42 +359,88 @@
     </div>
   </div>
 </div>
-	</div>
+	
 
 
 	<!-- Footer -->
- <footer class="page-footer font-small unique-color-dark pt-4">
+	<footer id="footer">
+		<div class="footer-top">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12 footer-info md-mb-30 sm-mb-30">							
+				  <h3>RealDeal</h3>
+					<p>We are here to make your business 							digital!!!</p>
+				  </div>
+				  <div class="col-md-3 col-sm-6 col-xs-12 footer-links md-mb-30 sm-mb-30">
+				  
+				  <h4>Useful links</h4>
+					  <ul>
+						  <li><i class="ion-ios-arrow-right"></i><a href="#">Home</a></li>
+						  <li><i class="ion-ios-arrow-right"></i><a href="#">About Us</a></li>
+						  <li><i class="ion-ios-arrow-right"></i><a href="#">Contacts</a></li>
+					  </ul>
+				  </div>
+				  
+				  <div class="col-md-3 col-sm-6 col-xs-12 footer-contact md-mb-30 sm-mb-30">
+				   <h4>Follow Us</h4>
+					<p>please follow us on social media.</p>
+					  <a href="#" class="Facebook"><i class="fa fa-facebook"></i></a>
+					  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+					  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+				  
+				  
+				  </div>
+				  <div class="col-md-3 col-sm-6 col-xs-12 footer-msg md-mb-30 sm-mb-30">
+					  <h4>Contact Us</h4>
+					   <p>For enquries or queries Write to us!!!						   </p>
+				       <form action="" method="post">
+						   
+						   <input type="text" id="lname" name="lname" placeholder = "Your Name" onblur="this.placeholder=">
+					    <input type="email" name="email" placeholder = "Your Email Address" onblur="this.placeholder=">
+						<textarea id="text" rows="3"
+								   placeholder = "Your Message"></textarea>
+						<input type="submit" value="Contact Us" >
+					  
+					   </form>
+					  
+				  </div>
+				  
+				
+				</div>
+			
+			</div>
+		<p class="copyright-text-muted">Copyright &copy;RealDeal 2020</p>
+		</div>
+	
+	</footer>
 
-  <!-- Footer Elements -->
-  <div class="container">
-
- 	 <!-- Call to action -->
- 	 <ul class="list-unstyled list-inline text-center py-2">
- 		 <li class="list-inline-item">
- 			 <h5 class="mb-1">Register for free</h5>
- 		 </li>
- 		 <li class="list-inline-item">
- 			 <a href="#!" class="btn btn-outline-white btn-rounded">Sign up!</a>
- 		 </li>
- 	 </ul>
- 	 <!-- Call to action -->
-
-  </div>
-  <!-- Footer Elements -->
-
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
- 	 <a href="#"> realdeal.com</a>
-  </div>
-
- </footer>
- <!-- end of Footer -->
-
-
- <!-- end of main content -->
 
 
 
+<script type="text/javascript">
+		$(function() {
+			$('.auth_up').hover(function() {
+				$('.connection_lines_up').css('border', '2px solid green');
+				$('.connection_lines_up').css('border-right', 'none');
+				$('.connection_lines_up').css('border-bottom', 'none');
+			}, function() {
+				// on mouseout, reset the background colour
+				$('.connection_lines_up').css('border', 'none');
+			});
+		});
 
+		$(function() {
+			$('.auth_in').hover(function() {
+				$('.connection_lines_in').css('border', '2px solid green');
+				$('.connection_lines_in').css('border-right', 'none');
+				$('.connection_lines_in').css('border-top', 'none');
+			}, function() {
+				// on mouseout, reset the background colour
+				$('.connection_lines_in').css('border', 'none');
+			});
+		});
+		$('.carousel').carousel();
+</script>
 
 </body>
 
