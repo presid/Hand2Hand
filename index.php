@@ -75,7 +75,7 @@
 				<a href="#" class="auth_in">in</a>
 			</div>
 		</div>
-		
+
 
 	</div>
  </nav>
@@ -100,7 +100,7 @@
 		</div>-->
 	<div class="list-group" id="group">
   <div class="section1">
-            
+
           <button class="navbar-toggle navbar-toggler  navbar-toggler-right" type="button" style="border: 2px solid  #009e47; margin-top: 5px;" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		 <span class=" icon-bar" ></span>
 		 <span class=" icon-bar" ></span>
@@ -120,28 +120,28 @@
                 <a class="submenu">Accessories</a>
                 <a class="submenu">Office</a>
                 <a class="submenu">Home appliances</a>
-  
-	 
-       
+
+
+
             <p class="para1">Specials</p>
             <div class="Special">
         <div class="card" id="cardbox" >
-			  
+
          <img src="img/rav4.png" class="card-img-top" id="reduce" alt="rav4">
            <div class="card-body" id="reduce-card">
             <h5 class="card-title">Card title</h5>
              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-     
+
           </div>
 </div>
-				
+
 				 <div class="card" id="cardbox" >
-			  
+
          <img src="img/rav4.png" class="card-img-top" id="reduce" alt="rav4">
            <div class="card-body" id="reduce-card">
             <h5 class="card-title">Card title</h5>
              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-     
+
           </div>
 </div>
                 <fieldset>
@@ -254,11 +254,11 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-	</div> 
+	</div>
 </div>
-	
-	
- 
+
+
+
 		<!--<div class="col-md-9 col-md-push-3 main_content">
 			<h2>Recommendations</h2>
 			<div class="row">
@@ -324,7 +324,40 @@
 		</div>
 
 		</div>-->
-		<div class="card-deck" id="deck">
+<div class="card-deck" id="deck">
+		<?php
+			include $_SERVER['DOCUMENT_ROOT'] . '/includes/db_inc.php';
+
+			$sql = "SELECT product.id, product.name, product.description, product.price, product.image, product.date
+			FROM product";
+
+			$result = $conn->query($sql);
+			//print_r($result->num_rows);
+
+			if ($result->rowCount() > 0) {
+				while($row = $result->fetch_assoc()) {
+					echo '
+					  <div class="card" id="box">
+					    <img src=".$row["image"]" alt="Item">
+					    <div class="card-body">
+					      <h5 class="card-title">".$row["name"]"</h5>
+					      <p class="card-text">
+									".$row["description"]"
+								</p>
+							 <p>".$row["price"]"</p>
+					    </div>
+					    <div class="card-footer">
+					      <small class="text-muted">".$row["date"]"</small>
+					    </div>
+					  </div>
+					 ';
+				}
+
+			}
+		 ?>
+ </div>
+
+<div class="card-deck" id="deck">
   <div class="card" id="box">
     <img src="img/rav4.png" alt="Rav4">
     <div class="card-body">
@@ -359,7 +392,7 @@
     </div>
   </div>
 </div>
-	
+
 
 
 	<!-- Footer -->
@@ -367,12 +400,12 @@
 		<div class="footer-top">
 			<div class="container">
 			  <div class="row">
-				<div class="col-md-3 col-sm-6 col-xs-12 footer-info md-mb-30 sm-mb-30">							
+				<div class="col-md-3 col-sm-6 col-xs-12 footer-info md-mb-30 sm-mb-30">
 				  <h3>RealDeal</h3>
 					<p>We are here to make your business 							digital!!!</p>
 				  </div>
 				  <div class="col-md-3 col-sm-6 col-xs-12 footer-links md-mb-30 sm-mb-30">
-				  
+
 				  <h4>Useful links</h4>
 					  <ul>
 						  <li><i class="ion-ios-arrow-right"></i><a href="#">Home</a></li>
@@ -380,38 +413,38 @@
 						  <li><i class="ion-ios-arrow-right"></i><a href="#">Contacts</a></li>
 					  </ul>
 				  </div>
-				  
+
 				  <div class="col-md-3 col-sm-6 col-xs-12 footer-contact md-mb-30 sm-mb-30">
 				   <h4>Follow Us</h4>
 					<p>please follow us on social media.</p>
 					  <a href="#" class="Facebook"><i class="fa fa-facebook"></i></a>
 					  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
 					  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-				  
-				  
+
+
 				  </div>
 				  <div class="col-md-3 col-sm-6 col-xs-12 footer-msg md-mb-30 sm-mb-30">
 					  <h4>Contact Us</h4>
 					   <p>For enquries or queries Write to us!!!						   </p>
 				       <form action="" method="post">
-						   
+
 						   <input type="text" id="lname" name="lname" placeholder = "Your Name" onblur="this.placeholder=">
 					    <input type="email" name="email" placeholder = "Your Email Address" onblur="this.placeholder=">
 						<textarea id="text" rows="3"
 								   placeholder = "Your Message"></textarea>
 						<input type="submit" value="Contact Us" >
-					  
+
 					   </form>
-					  
+
 				  </div>
-				  
-				
+
+
 				</div>
-			
+
 			</div>
 		<p class="copyright-text-muted">Copyright &copy;RealDeal 2020</p>
 		</div>
-	
+
 	</footer>
 
 
