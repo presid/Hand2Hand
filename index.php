@@ -328,26 +328,37 @@
 		<?php
 			include $_SERVER['DOCUMENT_ROOT'] . '/includes/db_inc.php';
 
-			$sql = "SELECT product.id, product.name, product.description, product.price, product.image, product.date
-			FROM product";
+			// $params = array(
+			// 	':product.id, product.name, product.description, product.price, product.image, product.date'
+			// )
 
-			$result = $conn->query($sql);
-			//print_r($result->num_rows);
+			$sql = "SELECT `id`, `name`, `description`, `price`, `image`, `date` FROM product";
 
-			if ($result->rowCount() > 0) {
-				while($row = $result->fetch_assoc()) {
+			$stmt = $conn->prepare($sql);
+
+			$stmt->execute();
+
+			$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+			$result = $stmt->fetchAll();
+			// print_r($result);
+
+			$count = $stmt->rowCount();
+
+			if ($count > 0) {
+
+				foreach($result as $row) {
 					echo '
 					  <div class="card" id="box">
-					    <img src=".$row["image"]" alt="Item">
+					    <img src="'.$row["image"].'" alt="Item">
 					    <div class="card-body">
-					      <h5 class="card-title">".$row["name"]"</h5>
+					      <h5 class="card-title">'.$row["name"].'</h5>
 					      <p class="card-text">
-									".$row["description"]"
+									'.$row["description"].'
 								</p>
-							 <p>".$row["price"]"</p>
+							 <p>'.$row["price"].'</p>
 					    </div>
 					    <div class="card-footer">
-					      <small class="text-muted">".$row["date"]"</small>
+					      <small class="text-muted">'.$row["date"].'</small>
 					    </div>
 					  </div>
 					 ';
