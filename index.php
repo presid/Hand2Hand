@@ -257,73 +257,7 @@
 	</div>
 </div>
 
-
-
-		<!--<div class="col-md-9 col-md-push-3 main_content">
-			<h2>Recommendations</h2>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="panel">
-						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
-						<a class="title_link" href="#">Toyota Rav4</a>
-						<p>12350$</p>
-						<p>Lusaka, today 19:15</p>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="panel">
-						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
-						<a class="title_link" href="#">Toyota Rav4</a>
-						<p>12350$</p>
-						<p>Lusaka, today 19:15</p>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="panel">
-						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
-						<a class="title_link" href="#">Toyota Rav4</a>
-						<p>12350$</p>
-						<p>Lusaka, today 19:15</p>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="panel">
-						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
-						<a class="title_link" href="#">Toyota Rav4</a>
-						<p>12350$</p>
-						<p>Lusaka, today 19:15</p>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="panel">
-						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
-						<a class="title_link" href="#">Toyota Rav4</a>
-						<p>12350$</p>
-						<p>Lusaka, today 19:15</p>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="panel">
-						<a href="#"><img src="img/rav4.png" alt="Rav4"></a>
-						<a class="title_link" href="#">Toyota Rav4</a>
-						<p>12350$</p>
-						<p>Lusaka, today 19:15</p>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-
-		</div>-->
+<div class="container">
 <div class="card-deck" id="deck">
 		<?php
 			include $_SERVER['DOCUMENT_ROOT'] . '/includes/db_inc.php';
@@ -348,6 +282,7 @@
 
 				foreach($result as $row) {
 					echo '
+
 					  <div class="card" id="box">
 					    <img src="'.$row["image"].'" alt="Item">
 					    <div class="card-body">
@@ -361,11 +296,13 @@
 					      <small class="text-muted">'.$row["date"].'</small>
 					    </div>
 					  </div>
+
 					 ';
 				}
 
 			}
 		 ?>
+ </div>
  </div>
 
 <div class="card-deck" id="deck">
