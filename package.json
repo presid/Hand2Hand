@@ -1,0 +1,28 @@
+{
+  "name": "RealDeal",
+  "version": "1.0.0",
+  "description": "The project is an Internet service for the convenient placement of announcements of various goods, services from individuals and companies.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raketa92/RealDeal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raketa92/RealDeal/issues"
+  },
+  "homepage": "https://github.com/raketa92/RealDeal#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
