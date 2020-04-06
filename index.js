@@ -1,8 +1,9 @@
 const express = require('express')
-const mysql = require('mysql')
 const path = require('path')
 const exphbs = require('express-handlebars')
-const mainRoutes = require('./routes/main')
+const sequelize = require('./utils/database')
+const mainRoute = require('./routes/main')
+const signInRoute = require('./routes/signIn')
 
 const PORT = process.env.PORT || 3000
 
@@ -18,21 +19,13 @@ app.set('views', 'views')
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use(mainRoutes)
+app.use('/', mainRoute)
+app.use('/signIn', signInRoute)
 
 async function start() {
   try {
-    const con = mysql.createConnection({
-      host: "localhost",
-      user: "nodejs",
-      password: "admin"
-    });
-
-    con.connect(function(err) {
-      if (err) throw err;
-      console.log("Connected!");
-    });
-
+    await sequelize.sync()
+    
     app.listen(PORT, () => {
       console.log('Server has been started...')
   })
