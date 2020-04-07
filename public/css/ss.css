@@ -562,3 +562,7 @@ float: left;
   margin-top: 6rem !important;
   margin-bottom: 8rem !important;
 }
+
+.card img {
+  height: 300px;
+}

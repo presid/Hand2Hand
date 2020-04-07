@@ -1,6 +1,6 @@
 const {Router} = require('express')
 const router = Router()
-const mainModel = require('../models/main')
+const mainModel = require('../models/products')
 
 
 router.get('/', (req, res, next) => {

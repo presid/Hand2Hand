@@ -68,6 +68,25 @@
     </div>
 </div>
 
+
+<div class="row m-1">
+    <div class="offset-3"></div>
+    {{#each prod}}
+    <div class="col-3">
+        <div class="card" id="cardbox" >
+            <img src="{{image}}" class="card-img-top" id="reduce" alt="rav4">
+            <div class="card-body" id="reduce-card">
+                <h5 class="card-title">{{product_name}}</h5>
+                <p class="card-text">{{description}}</p>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <p>No products</p>
+    {{/each}}
+</div>
+
+
 <div class="row">
     <div class="col-3 offset-3">
         <div class="card" id="cardbox" >

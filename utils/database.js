@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 
-const DB_NAME = 'realdeal'
+const DB_NAME = 'realdeal_dev'
 const USER_NAME = 'nodejs'
 const PASSWORD = 'admin'
 

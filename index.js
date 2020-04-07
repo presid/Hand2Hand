@@ -1,8 +1,8 @@
 const express = require('express')
 const path = require('path')
 const exphbs = require('express-handlebars')
-const sequelize = require('./utils/database')
-const mainRoute = require('./routes/main')
+const db = require('./utils/database')
+const homeRoute = require('./routes/home')
 const signInRoute = require('./routes/signIn')
 
 const PORT = process.env.PORT || 3000
@@ -19,12 +19,12 @@ app.set('views', 'views')
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/', mainRoute)
+app.use('/', homeRoute)
 app.use('/signIn', signInRoute)
 
 async function start() {
   try {
-    await sequelize.sync()
+    await db.sync()
     
     app.listen(PORT, () => {
       console.log('Server has been started...')
