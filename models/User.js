@@ -57,8 +57,10 @@ const User = db.define('User', {
 //     console.log("Tables have been created");
 //   }).catch(err=>console.log(err));
 
-// User.hasMany(Product, {foreignKey: 'productId', sourceKey: 'id'});
-// Product.belongsTo(User, {foreignKey: 'productId', targetKey: 'id'});
+User.hasMany(Product);
+Product.belongsTo(User);
+
+// db.sync();
 
 
 module.exports = User;

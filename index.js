@@ -5,10 +5,10 @@ const db = require('./utils/database');
 const homeRoute = require('./routes/home');
 const signInRoute = require('./routes/signIn');
 
-const User = require('./models/User');
-const Category = require('./models/Category');
-const SubCategory = require('./models/Subcategory');
-const Product = require('./models/Product');
+// const Product = require('./models/Product');
+// const User = require('./models/User');
+// const Category = require('./models/Category');
+// const SubCategory = require('./models/Subcategory');
 
 
 
@@ -31,7 +31,7 @@ app.use('/signIn', signInRoute);
 
 async function start() {
   try {
-    // await db.sync();
+    // await db.sync({force: true});
     
     app.listen(PORT, () => {
       console.log('Server has been started...');
@@ -43,7 +43,4 @@ async function start() {
 }
 
 start();
-
-User.hasMany(Product);
-// Product.belongsTo(User);
 

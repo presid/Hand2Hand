@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../utils/database');
 const Product = require('../models/Product');
+// const User = require('../models/User');
 
 const Category = db.define('Category', {
     id: {
@@ -21,7 +22,7 @@ const Category = db.define('Category', {
 //     console.log("Tables have been created");
 //   }).catch(err=>console.log(err));
 
-// Category.hasMany(Product);
-// Product.belongsTo(Category);
+Category.hasMany(Product);
+Product.belongsTo(Category);
 
 module.exports = Category;
