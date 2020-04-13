@@ -1,54 +1,15 @@
-<!-- Footer -->
-	<footer id="footer">
-		<div class="footer-top">
-			<div class="container">
-			  <div class="row">
-				<div class="col-md-3 col-sm-6 col-xs-12 footer-info md-mb-30 sm-mb-30">
-				  <h3>RealDeal</h3>
-					<p>We are here to make your business 							digital!!!</p>
-				  </div>
-				  <div class="col-md-3 col-sm-6 col-xs-12 footer-links md-mb-30 sm-mb-30">
-
-				  <h4>Useful links</h4>
-					  <ul>
-						  <li><i class="ion-ios-arrow-right"></i><a href="#">Home</a></li>
-						  <li><i class="ion-ios-arrow-right"></i><a href="#">About Us</a></li>
-						  <li><i class="ion-ios-arrow-right"></i><a href="#">Contacts</a></li>
-					  </ul>
-				  </div>
-
-				  <div class="col-md-3 col-sm-6 col-xs-12 footer-contact md-mb-30 sm-mb-30">
-				   <h4>Follow Us</h4>
-					<p>please follow us on social media.</p>
-					  <a href="#" class="Facebook"><i class="fa fa-facebook"></i></a>
-					  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-					  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-
-
-				  </div>
-				  <div class="col-md-3 col-sm-6 col-xs-12 footer-msg md-mb-30 sm-mb-30">
-					  <h4>Contact Us</h4>
-					   <p>For enquries or queries Write to us!!!						   </p>
-				       <form action="" method="post">
-
-						   <input type="text" id="lname" name="lname" placeholder = "Your Name" onblur="this.placeholder=">
-					    <input type="email" name="email" placeholder = "Your Email Address" onblur="this.placeholder=">
-						<textarea id="text" rows="3"
-								   placeholder = "Your Message"></textarea>
-						<input type="submit" value="Contact Us" >
-
-					   </form>
-
-				  </div>
-
-
-				</div>
-
-			</div>
-		<p class="copyright-text-muted mt-3 mb-0">Copyright &copy;RealDeal 2020</p>
-		</div>
-
-	</footer>	
-
-<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script src="/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+  <script src="/js/vertical-responsive-menu.min.js"></script>
+  <script>
+   $(document).ready(function(){
+    
+	$(".fa-search").click(function(){
+	    $(".icon").toggleClass("active");
+	    $("input[type='text']").toggleClass("active");
+        });
+    });
+  
+  </script>
