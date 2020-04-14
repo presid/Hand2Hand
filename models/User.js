@@ -60,7 +60,7 @@ const User = db.define('User', {
 User.hasMany(Product);
 Product.belongsTo(User);
 
-// db.sync();
+// db.sync({force: true});
 
 
 module.exports = User;

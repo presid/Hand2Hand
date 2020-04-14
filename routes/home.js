@@ -10,7 +10,12 @@ const SubCategory = require('../models/Subcategory');
 
 router.get('/', async (req, res, next) => {
     try {
-        const prod = await Product.findAll({include:[{model: User, required: false}, {model: Category, required: false}, {model: SubCategory, required: false}], raw: true});
+        const prod = await Product.findAll({
+            include:[
+                {model: User, required: false},
+                {model: Category, required: false}, 
+                {model: SubCategory, required: false}
+            ], raw: true});
 
         console.log(prod);
         // const user = await users.findAll({raw: true});

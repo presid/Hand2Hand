@@ -21,7 +21,9 @@ const Subcategory = db.define('Subcategory', {
 //     console.log("Tables have been created");
 //   }).catch(err=>console.log(err));
 
-// Subcategory.hasMany(Product);
-// Product.belongsTo(Subcategory);
+Subcategory.hasMany(Product);
+Product.belongsTo(Subcategory);
+
+// db.sync({force: true});
 
 module.exports = Subcategory;

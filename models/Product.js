@@ -47,9 +47,10 @@ const Product = db.define('Product', {
 // Product.belongsTo(User, {foreignKey: 'productId', targetKey: 'id'});
 // Product.belongsTo(Category);
 // Product.belongsTo(SubCategory);
-
-// User.hasMany(Product);
 // Product.belongsTo(User);
+// User.hasMany(Product);
+
+// db.sync();
 
 
 module.exports = Product;
