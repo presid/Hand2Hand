@@ -2,8 +2,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const db = require('./utils/database');
-const homeRoute = require('./routes/home');
-const signInRoute = require('./routes/signIn');
+const homeRoute = require('./api/routes/homeRoute');
 
 
 const PORT = process.env.PORT || 3000;
@@ -21,7 +20,6 @@ app.set('views', 'views');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRoute);
-app.use('/signIn', signInRoute);
 
 async function start() {
   try {
