@@ -2,7 +2,6 @@ const Sequelize = require('sequelize');
 const db = require('../utils/database');
 // const User = require('../models/User');
 // const Category = require('../models/Category');
-// const SubCategory = require('../models/Subcategory');
 
 const Product = db.define('Product', {
     id: {
@@ -37,11 +36,6 @@ const Product = db.define('Product', {
         allowNull: false
     }
 });
-
-// db.sync({force:true}).then(()=>{
- 
-//     console.log("Tables have been created");
-//   }).catch(err=>console.log(err));
 
 // User.hasMany(Product, {foreignKey: 'productId'});
 // Product.belongsTo(User, {foreignKey: 'productId', targetKey: 'id'});

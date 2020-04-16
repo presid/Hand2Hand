@@ -5,12 +5,6 @@ const db = require('./utils/database');
 const homeRoute = require('./routes/home');
 const signInRoute = require('./routes/signIn');
 
-// const Product = require('./models/Product');
-// const User = require('./models/User');
-// const Category = require('./models/Category');
-// const SubCategory = require('./models/Subcategory');
-
-
 
 const PORT = process.env.PORT || 3000;
 
@@ -32,6 +26,7 @@ app.use('/signIn', signInRoute);
 async function start() {
   try {
     // await db.sync({force: true});
+    // await db.sync();
     
     app.listen(PORT, () => {
       console.log('Server has been started...');
