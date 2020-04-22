@@ -3,7 +3,8 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const db = require('./utils/database');
 const homeRoute = require('./api/routes/homeRoute');
-const productRoute = require('./api/routes/categoryRoute');
+const categoryRoute = require('./api/routes/categoryRoute');
+const subCategoryRoute = require('./api/routes/subcategoryRoute');
 
 
 const PORT = process.env.PORT || 3000;
@@ -21,7 +22,8 @@ app.set('views', 'views');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRoute);
-app.use('/', productRoute);
+app.use('/', categoryRoute);
+app.use('/', subCategoryRoute);
 
 async function start() {
   try {
