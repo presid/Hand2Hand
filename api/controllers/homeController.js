@@ -8,9 +8,9 @@ exports.getAll = async (req, res) => {
     try {
         const products = await Product.findAll({raw: true});
 
-        const categories = await Category.findAll({plain: true, raw: true});
+        const categories = await Category.findAll({raw: true});
 
-        const user = await User.findOne({plain: true, raw: true});
+        const user = await User.findOne({raw: true});
             
         res.render('index', {
             title: 'main page',

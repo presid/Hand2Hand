@@ -15,6 +15,10 @@ const Category = db.define('Category', {
         allowNull: false
     },
 
+    image: {
+        type: Sequelize.STRING
+    },
+
     parent_id: {
         type: Sequelize.INTEGER.UNSIGNED.ZEROFILL,
         allowNull: false
@@ -24,6 +28,7 @@ const Category = db.define('Category', {
 
 Category.hasMany(Product);
 Product.belongsTo(Category);
+// Category.hasMany(Category, {as: 'subCategory'});
 
 
 // Category.hasMany(Subcategory);
