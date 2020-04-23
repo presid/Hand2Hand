@@ -27,7 +27,7 @@ app.use('/', subCategoryRoute);
 
 async function start() {
   try {
-    await db.sync({force: true});
+    // await db.sync({force: true});
     // await db.sync();
     
     app.listen(PORT, () => {

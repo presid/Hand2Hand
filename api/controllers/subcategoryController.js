@@ -21,7 +21,7 @@ exports.getSubcategory = async (req, res) => {
         console.log(data);
 
         res.render('subcategory', {
-            title: 'Categories',
+            title: 'Subcategories',
             data,
         });
         

@@ -4,31 +4,33 @@ const {Op} = require('sequelize');
 
 exports.getCategory = async (req, res) => {
     try {
-        const category = await Category.findAll({ 
+        let categoryName = req.params.categoryName;
+        
+        const ids = await Category.findOne({
             where: {
-                // name: req.params.categoryName,
-                parent_id: 1
+                name: req.params.categoryName
             },
-            // include: [
-            //     {model: Category, as: 'subCategory', required: false}
-            // ]
+            attributes: ['id']
+            
         });
 
-        // const subcategory = await Category.findAll({
-        //     where: {
-        //         parent_id: id
-        //     }
-        // });
+        // console.log(ids.get({plain: true}));
 
-        console.log(req.params);
+        const category = await Category.findAll({ 
+            where: {
+                parent_id: ids.id
+            }            
+        });
+
+        // console.log(req.params);
         const data = await category.map(item => item.get({plain: true}));
-        // const data2 = subcategory.map(item => item.get({plain: true}));
-       console.log(data);
+        console.log(data);
+        console.log(categoryName);
 
         res.render('category', {
             title: 'Categories',
             data,
-            // data2
+            categoryName
         })
     } catch (err) {
         console.log(err);
