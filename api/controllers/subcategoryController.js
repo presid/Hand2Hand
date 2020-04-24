@@ -3,21 +3,22 @@ const Category = require('../models/Category');
 
 exports.getSubcategory = async (req, res) => {
     try {
-        const subcategory = await Category.findAll({ 
+
+        const subcatId = await Category.findOne({ 
             where: {
                 name: req.params.subcategoryName
             },
-            // include: [
-            //     {model: Product, required: false}
-            // ]
+            attributes: ['id']
         });
 
-        // const product = await Product.findAll({raw: true,
-        //     where: {
-        //         id: category.CategoryId
-        //     }   
-        // })
-        const data = subcategory.map(item => item.get({plain: true}));
+        const product = await Product.findAll({
+            where: {
+                CategoryId: subcatId.id
+            }   
+        });
+
+
+        const data = product.map(item => item.get({plain: true}));
         console.log(data);
 
         res.render('subcategory', {
