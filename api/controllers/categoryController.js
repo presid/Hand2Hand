@@ -24,8 +24,8 @@ exports.getCategory = async (req, res) => {
 
         // console.log(req.params);
         const data = await category.map(item => item.get({plain: true}));
-        console.log(data);
-        console.log(categoryName);
+        console.log('catdata:', data);
+        console.log('catname:', categoryName);
 
         res.render('category', {
             title: 'Categories',

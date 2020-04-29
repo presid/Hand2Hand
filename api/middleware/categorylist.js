@@ -1,13 +1,22 @@
-const db = require('../../utils/database');
 const Category = require('../models/Category');
 
-try {
-    const categoryNames = Category.findAll({
-        attributes: ['name']
-    });
+    async function getAllCategoryNames() {
+        try {
+        let categoryNames = await Category.findAll({
+            attributes: ['name']
+        });
 
-    const categoryNames = categoryNames.map(item => item.get({plain: true}));
-    console.log(categoryNames);
-} catch (err){
-    console.log(err);
-}
+        let categoryNamesAll = categoryNames.map(item => item.get({plain: true}));
+        // console.log('categoryNames: ', categoryNamesAll);
+
+        return categoryNamesAll;
+        // module.exports = categoryNamesAll;
+        }    
+        catch (err){
+            console.log(err);
+        }
+    }
+    
+const categoryNames = getAllCategoryNames().then(result => result.data);
+
+module.exports = categoryNames

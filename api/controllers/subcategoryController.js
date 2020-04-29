@@ -19,7 +19,7 @@ exports.getSubcategory = async (req, res) => {
 
 
         const data = product.map(item => item.get({plain: true}));
-        console.log(data);
+        console.log('data: ', data);
 
         res.render('subcategory', {
             title: 'Subcategories',
