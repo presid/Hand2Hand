@@ -4,6 +4,10 @@ const Category = require('../models/Category');
 exports.getSubcategory = async (req, res) => {
     try {
 
+        console.log('categName: ', req.params.CategoryName);
+
+        if(req.params.CategoryName != 'Laptops') {res.sendStatus(404);}
+
         const subcatId = await Category.findOne({ 
             where: {
                 name: req.params.subcategoryName

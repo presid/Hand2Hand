@@ -10,8 +10,8 @@ module.exports = async (req, res, next) => {
 
         let categoryNamesAll = categoryNames.map(item => item.get({plain: true}));
 
-        console.log('catlist:', categoryNamesAll);
-        console.log('req.name:', req.params.categoryName);
+        // console.log('catlist:', categoryNamesAll);
+        // console.log('req.name:', req.params.categoryName);
 
         for(var i = 0; i < categoryNamesAll.length; i++) {
             console.log('inside forloop')
