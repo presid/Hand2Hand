@@ -2,6 +2,7 @@ const Category = require('../models/Category');
 
 
 module.exports = async (req, res, next) => {
+    let categoryName = null;
 
     try {
         let categoryNames = await Category.findAll({
