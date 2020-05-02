@@ -4,34 +4,44 @@ const Category = require('../models/Category');
 exports.getSubcategory = async (req, res) => {
     try {
 
-        let categoryName = null;
-        let categoryNames = await Category.findAll({
-            attributes: ['id', 'name']
+        let categoryNameId = null;
+        // let categoryNames = await Category.findAll({
+        //     attributes: ['id', 'name']
+        // });
+
+        categoryNameId = await Category.findOne({
+            where: { name: req.params.categoryName},
+            attributes: ['id']
         });
 
-        let categoryNamesAll = categoryNames.map(item => item.get({plain: true}));
+        console.log('cateId: ', categoryNameId.id);
 
-        for(var i = 0; i < categoryNamesAll.length; i++) {
-            console.log('inside forloop')
-            if(req.params.categoryName == categoryNamesAll[i].name) {
-                categoryName = categoryNamesAll[i];
-                console.log('catName: ', categoryName);
-                break;
-            }
-        }
+        // let categoryNamesAll = categoryNames.map(item => item.get({plain: true}));
 
-        console.log('categName: ', req.params.categoryName);
-        console.log('categName2: ', categoryName);
+        // for(var i = 0; i < categoryNames.length; i++) {
+            // console.log('inside forloop')
+            // if(req.params.categoryName == categoryNames[i].name) {
+                // categoryName = categoryNames[i];
+                // console.log('catName: ', categoryName);
+                // break;
+            // }
+        // }
 
-        if(req.params.categoryName != categoryName.name) {res.sendStatus(404);}
+        // console.log('categName: ', req.params.categoryName);
+        // console.log('categName2: ', categoryName);
+
+        if(categoryNameId == null) {res.sendStatus(404);}
+        console.log('cateId: ', categoryNameId.id);
 
         const subcatId = await Category.findOne({ 
             where: {
                 name: req.params.subcategoryName,
-                parent_id: categoryName.id
+                parent_id: categoryNameId.id
             },
             attributes: ['id']
         });
+
+        if(subcatId == null) {res.sendStatus(404);}
 
         const product = await Product.findAll({
             where: {
