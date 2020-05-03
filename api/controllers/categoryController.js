@@ -16,6 +16,8 @@ exports.getCategory = async (req, res) => {
 
         // console.log(ids.get({plain: true}));
 
+        if (ids == null) {res.sendStatus(404);}
+
         const category = await Category.findAll({ 
             where: {
                 parent_id: ids.id

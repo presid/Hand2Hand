@@ -30,7 +30,7 @@ exports.getSubcategory = async (req, res) => {
         // console.log('categName: ', req.params.categoryName);
         // console.log('categName2: ', categoryName);
 
-        if(categoryNameId == null) {res.sendStatus(404);}
+        if(categoryNameId.id == null) {res.sendStatus(404);}
         console.log('cateId: ', categoryNameId.id);
 
         const subcatId = await Category.findOne({ 
