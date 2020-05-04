@@ -3,7 +3,7 @@ const Category = require('../models/Category');
 
 exports.getSubcategory = async (req, res) => {
     try {
-
+        console.log('test: ');
         let categoryNameId = null;
         // let categoryNames = await Category.findAll({
         //     attributes: ['id', 'name']
@@ -14,7 +14,7 @@ exports.getSubcategory = async (req, res) => {
             attributes: ['id']
         });
 
-        console.log('cateId: ', categoryNameId.id);
+        console.log('cateId: ', categoryNameId);
 
         // let categoryNamesAll = categoryNames.map(item => item.get({plain: true}));
 
@@ -30,7 +30,7 @@ exports.getSubcategory = async (req, res) => {
         // console.log('categName: ', req.params.categoryName);
         // console.log('categName2: ', categoryName);
 
-        if(categoryNameId.id == null) {res.sendStatus(404);}
+        if(categoryNameId == null) {return res.sendStatus(404);}
         console.log('cateId: ', categoryNameId.id);
 
         const subcatId = await Category.findOne({ 
@@ -41,7 +41,7 @@ exports.getSubcategory = async (req, res) => {
             attributes: ['id']
         });
 
-        if(subcatId == null) {res.sendStatus(404);}
+        if(subcatId == null) {return res.sendStatus(404);}
 
         const product = await Product.findAll({
             where: {
