@@ -6,20 +6,24 @@ const Options = require('../models/Options');
 exports.getAll = async (req, res) => {
     
     try {
-        const products = await Product.findAll({raw: true});
+        const products = await Product.findAll();
 
-        const categories = await Category.findAll({raw: true});
+        const categories = await Category.findAll({});
 
         const user = await User.findOne({raw: true});
-            
+
+        const data_products = products.map(item => item.get({plain: true}));
+        const data_categories = categories.map(item => item.get({plain: true}));
+        // const data_user = user.map(item => item.get({plain: true}));
+        
         res.render('index', {
             title: 'main page',
-            product: products,
-            category: categories,
+            product: data_products,
+            category: data_categories,
             user: user        
         });
 
-        console.log(categories);
+        // console.log(categories);
     } catch (e) {
         console.log(e);
     }
