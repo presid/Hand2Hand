@@ -28,29 +28,6 @@ exports.getAll = async (req, res) => {
         console.log(e);
     }
 
-    // try {
-    //     await Product.findAll({raw: true})
-    //         .then((products) => {
-    //             Category.findAll({plain: true, raw: true})
-    //             .then((categories ) => {
-    //                 User.findOne({plain: true, raw: true})
-    //                 .then((user) => {
-    //                     console.log(user, categories, products);
-    //                     res.render('index', {
-    //                         title: 'main page',
-    //                         product: products,
-    //                         category: categories,
-    //                         user: user        
-    //                     });
-    //                 });
-    //             });
-    //         });
-
-    //     console.log(categories);
-    // } catch (e) {
-    //     console.log(e);
-    // }
-    
 }
 
 

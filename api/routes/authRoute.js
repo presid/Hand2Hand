@@ -2,6 +2,10 @@ const {Router} = require('express');
 const router = Router;
 const authController = require('../controllers/authController');
 
-router.get('auth/signin', authController.signin);
-router.get('auth/signout', authController.signout);
-router.get('auth/signup', authController.signup);
+router.get('/signin', authController.signIn);
+// router.get('/signin', (req, res) => {res.render('signIn')});
+
+router.get('/signout', authController.signOut);
+router.get('/signup', authController.signUp);
+
+module.exports = router;

@@ -5,7 +5,7 @@ const db = require('./utils/database');
 const homeRoute = require('./api/routes/homeRoute');
 const categoryRoute = require('./api/routes/categoryRoute');
 const subCategoryRoute = require('./api/routes/subcategoryRoute');
-const authRoute = require('./api/routes/subcategoryRoute');
+const authRoute = require('./api/routes/authRoute');
 
 
 const PORT = process.env.PORT || 3000;
@@ -23,6 +23,7 @@ app.set('views', 'views');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRoute);
+// app.get('/auth/signIn', (req, res) => {res.render('signIn')});
 app.use('/auth', authRoute);
 app.use('/categories', categoryRoute);
 app.use('/categories', subCategoryRoute);
