@@ -6,11 +6,18 @@ const homeRoute = require('./api/routes/homeRoute');
 const categoryRoute = require('./api/routes/categoryRoute');
 const subCategoryRoute = require('./api/routes/subcategoryRoute');
 const authRoute = require('./api/routes/authRoute');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true}));
+
+app.use(cookieParser());
+
 const hbs = exphbs.create({
   defaultLayout: 'main',
   extname: 'hbs'
