@@ -1,16 +1,21 @@
 const Product = require('../models/Product');
 const Category = require('../models/Category');
 
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+
 exports.getSubcategory = async (req, res) => {
     try {
+        redirectTo = req.protocol + '://' + req.get('host') + req.originalUrl;
+        userLogged = req.userLogged;
         let categoryNameId = null;
+
+        let user = req.session.user ? req.session.user : null;
 
         categoryNameId = await Category.findOne({
             where: { name: req.params.categoryName},
             attributes: ['id']
         });
-
-        // console.log('cateId: ', categoryNameId);
 
         if(categoryNameId == null) {return res.sendStatus(404);}
 
@@ -37,6 +42,9 @@ exports.getSubcategory = async (req, res) => {
         res.render('subcategory', {
             title: 'Subcategories',
             data,
+            user,
+            userLogged,
+            redirectTo
         });
         
     } catch (err) {

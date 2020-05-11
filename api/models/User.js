@@ -32,17 +32,17 @@ const User = db.define('User', {
 
     state: {
         type: Sequelize.STRING(15),
-        allowNull: false
+        defaultValue: ' '
     },
 
     city: {
         type: Sequelize.STRING(15),
-        allowNull: false
+        defaultValue: ' '
     },
 
     phone: {
         type: Sequelize.STRING(12),
-        allowNull: false
+        defaultValue: ' '
     },
 
     reg_date: {
@@ -56,6 +56,7 @@ const User = db.define('User', {
 
 });
 
+// db.sync();
 
 // db.sync({force:true}).then(()=>{
  

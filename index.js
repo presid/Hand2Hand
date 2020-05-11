@@ -7,7 +7,8 @@ const categoryRoute = require('./api/routes/categoryRoute');
 const subCategoryRoute = require('./api/routes/subcategoryRoute');
 const authRoute = require('./api/routes/authRoute');
 const bodyParser = require('body-parser');
-// const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 
 const PORT = process.env.PORT || 3000;
@@ -26,6 +27,9 @@ const hbs = exphbs.create({
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', 'views');
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(session({secret: 'test_key', resave: false, saveUninitialized: true}));
+app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 

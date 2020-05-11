@@ -6,24 +6,34 @@ const Options = require('../models/Options');
 exports.getAll = async (req, res) => {
     
     try {
+        redirectTo = req.protocol + '://' + req.get('host') + req.originalUrl;
+        userLogged = req.userLogged;
         const products = await Product.findAll();
 
         const categories = await Category.findAll({});
+        let user = null;
 
-        const user = await User.findOne({raw: true});
+        if(req.session.user) {
+            user = await User.findOne({raw:true,
+                where: {
+                    email: req.session.user.email
+                }
+            });
+        }
 
         const data_products = products.map(item => item.get({plain: true}));
         const data_categories = categories.map(item => item.get({plain: true}));
-        // const data_user = user.map(item => item.get({plain: true}));
         
+
         res.render('index', {
             title: 'main page',
             product: data_products,
             category: data_categories,
-            user: user        
+            user: user,
+            userLogged,
+            redirectTo    
         });
 
-        // console.log(categories);
     } catch (e) {
         console.log(e);
     }
