@@ -2,6 +2,11 @@
     <div class="row">
         <div class="col-3 m-auto">
             <img class="mb-4" src="/images/common/logo_RD.png" alt="" width="72" height="72">
+            {{#if loggedIn}}
+            <span class="green">{{message}}</span>
+            {{else}}
+            <span class="red">{{message}}</span>
+            {{/if}}
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
