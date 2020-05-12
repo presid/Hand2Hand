@@ -18,7 +18,7 @@ exports.getCategory = async (req, res) => {
         
         const ids = await Category.findOne({
             where: {
-                name: req.params.categoryName
+                name: categoryName
             },
             attributes: ['id']
             
@@ -33,8 +33,8 @@ exports.getCategory = async (req, res) => {
         });
 
         const data = await category.map(item => item.get({plain: true}));
-        console.log('catdata:', data);
-        console.log('catname:', categoryName);
+        // console.log('catdata:', data);
+        // console.log('catname:', categoryName);
 
         res.render('category', {
             title: 'Categories',

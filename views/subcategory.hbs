@@ -7,8 +7,9 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item"><a href="category.html">Category</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Sub-category</li>
+                    <li class="breadcrumb-item"><a href="/categories/{{categoryName}}">{{categoryName}}</a></li>
+                    <li class="breadcrumb-item"><a href="/categories/{{categoryName}}/{{subcategoryName}}">{{subcategoryName}}</a></li>
+                    {{!-- <li class="breadcrumb-item active" aria-current="page">Sub-category</li> --}}
                 </ol>
             </nav>
         </div>
@@ -32,7 +33,7 @@
                 <div class="card-header bg-success text-white text-uppercase">Last product</div>
                 <div class="card-body">
                     <img class="img-fluid" src="{{image}}" />
-                    <h5 class="card-title">{{name}}</h5>
+                    <h4 class="card-title"><a href="{{categoryName}}{{../subcategoryName}}/{{id}}" title="View Product">{{product_name}}</a></h4>
                     <p class="card-text">{{description}}</p>
                     <p class="bloc_left_price">{{price}}</p>
                 </div>
@@ -46,7 +47,7 @@
                     <div class="card">
                         <img class="card-img-top" width="253" height="167" src="{{image}}" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="product.html" title="View Product">{{name}}</a></h4>
+                            <h4 class="card-title"><a href="{{categoryName}}{{../subcategoryName}}/{{id}}" title="View Product">{{product_name}}</a></h4>
                             <p class="card-text">{{description}}</p>
                             <div class="row">
                                 <div class="col">

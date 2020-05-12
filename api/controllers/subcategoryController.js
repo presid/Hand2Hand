@@ -9,11 +9,13 @@ exports.getSubcategory = async (req, res) => {
         redirectTo = req.protocol + '://' + req.get('host') + req.originalUrl;
         userLogged = req.userLogged;
         let categoryNameId = null;
+        categoryName = req.params.categoryName;
+        subcategoryName = req.params.subcategoryName;
 
         let user = req.session.user ? req.session.user : null;
 
         categoryNameId = await Category.findOne({
-            where: { name: req.params.categoryName},
+            where: { name: categoryName},
             attributes: ['id']
         });
 
@@ -21,7 +23,7 @@ exports.getSubcategory = async (req, res) => {
 
         const subcatId = await Category.findOne({ 
             where: {
-                name: req.params.subcategoryName,
+                name: subcategoryName,
                 parent_id: categoryNameId.id
             },
             attributes: ['id']
@@ -37,14 +39,16 @@ exports.getSubcategory = async (req, res) => {
 
 
         const data = product.map(item => item.get({plain: true}));
-        console.log('data: ', data);
+        // console.log('data: ', data);
 
         res.render('subcategory', {
             title: 'Subcategories',
             data,
             user,
             userLogged,
-            redirectTo
+            redirectTo,
+            categoryName,
+            subcategoryName
         });
         
     } catch (err) {

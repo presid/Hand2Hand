@@ -71,7 +71,7 @@ exports.logOut = async (req, res, next) => {
         console.log('user logged out');        
     });
     userLogged = false;
-    res.redirect('/');
+    res.redirect(redirectTo);
 }
 
 //Sign up

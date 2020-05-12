@@ -2,10 +2,13 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const db = require('./utils/database');
+
 const homeRoute = require('./api/routes/homeRoute');
 const categoryRoute = require('./api/routes/categoryRoute');
 const subCategoryRoute = require('./api/routes/subcategoryRoute');
+const productRoute = require('./api/routes/productRoute');
 const authRoute = require('./api/routes/authRoute');
+
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -37,6 +40,7 @@ app.use('/', homeRoute);
 app.use('/auth', authRoute);
 app.use('/categories', categoryRoute);
 app.use('/categories', subCategoryRoute);
+app.use('/categories', productRoute);
 
 
 async function start() {
